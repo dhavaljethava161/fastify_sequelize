@@ -1,0 +1,25 @@
+{
+  "name": "fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node ./src/index.js"
+  },
+  "author": "dhaval_jethava",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.24.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^8.0.0",
+    "mysql2": "^3.6.3",
+    "nodemailer": "^6.9.3",
+    "sequelize": "^6.11.0"
+  }
+}

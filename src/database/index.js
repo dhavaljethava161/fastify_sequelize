@@ -17,7 +17,7 @@ const admin = [
 
 export const initializeDatabase = async () => {
   try {
-    await model.sequelize.sync({ alter: true, force: true }).then(() => {
+    await model.sequelize.sync({ alter: true, force: false }).then(() => {
       console.log("Database synchronized");
     });
 

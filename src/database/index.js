@@ -1,4 +1,4 @@
-import { model } from "../model";
+import { model, sequelize } from "../model";
 
 const admin = [
   {
@@ -13,19 +13,33 @@ const admin = [
     createdAt: "2023-11-09 11:50:00",
     updatedAt: "2023-11-09 11:50:00",
   },
+  {
+    id: 2,
+    username: "dharmik",
+    email: "dharmik.work123@gmail.com",
+    password: "Dhaval@123",
+    number: 8128967713,
+    coin: 100,
+  },
+  {
+    id: 3,
+    username: "darshan",
+    email: "darshan.work123@gmail.com",
+    password: "Dhaval@123",
+    number: 9824785424,
+    coin: 100,
+  },
 ];
 
 export const initializeDatabase = async () => {
   try {
-    await model.sequelize.sync({ alter: true, force: false }).then(() => {
+    await sequelize.sync({ alter: true, force: true }).then(() => {
       console.log("Database synchronized");
     });
 
     await model.User.bulkCreate(admin).then(() => {
       console.log("User record created");
     });
-    // console.log("user===>", user);
-    // console.log("model===>", model.User);
   } catch (error) {
     console.log("error has been occured");
     console.error("Database initialization error:", error);
